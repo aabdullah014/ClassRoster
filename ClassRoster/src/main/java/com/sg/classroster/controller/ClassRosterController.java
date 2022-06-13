@@ -21,9 +21,15 @@ import java.util.List;
  */
 public class ClassRosterController {
     
-    private final UserIO io = new UserIOConsoleImpl();
-    private final ClassRosterView view = new ClassRosterView();
-    private final ClassRosterDao dao = new ClassRosterDaoFileImpl();
+    private final ClassRosterView view;
+    private final ClassRosterDao dao;
+
+    public ClassRosterController(ClassRosterView view, ClassRosterDao dao) {
+        this.view = view;
+        this.dao = dao;
+    }
+    
+    
     
     public void run(){
         boolean keepGoing = true;

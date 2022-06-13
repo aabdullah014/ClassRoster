@@ -13,11 +13,11 @@ import java.util.List;
  */
 public interface ClassRosterDao {
     
-    Student addStudent(String studentID, Student student);
+    Student addStudent(String studentID, Student student) throws ClassRosterDaoException;
     
-    List<Student> getAllStudents();
+    List<Student> getAllStudents() throws ClassRosterDaoException;
     
-    Student getStudent(String studentID);
+    Student getStudent(String studentID) throws ClassRosterDaoException;
     
-    Student removeStudent(String studentID);
+    Student removeStudent(String studentID) throws ClassRosterDaoException;
 }

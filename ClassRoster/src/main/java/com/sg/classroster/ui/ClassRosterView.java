@@ -13,7 +13,12 @@ import java.util.List;
  */
 public class ClassRosterView {
     
-    private final UserIO io = new UserIOConsoleImpl();
+    private final UserIO io;
+
+    public ClassRosterView(UserIO io) {
+        this.io = io;
+    }
+    
     
     public int printMenuGetChoice(){
         io.print("Main Menu");
@@ -107,5 +112,10 @@ public class ClassRosterView {
     
     public void displayUnknownCommandBanner(){
         io.print("Unknown command!");
+    }
+    
+    public void displayError(String error){
+        io.print("**********************ERRROR************************");
+        io.print(error);
     }
 }

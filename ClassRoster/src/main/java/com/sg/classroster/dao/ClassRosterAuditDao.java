@@ -8,6 +8,8 @@ package com.sg.classroster.dao;
  *
  * @author abdulrahman
  */
-public class ClassRosterDaoException {
+public interface ClassRosterAuditDao {
+    
+    public void writeAuditEntry(String entry) throws ClassRosterPersistenceException;
     
 }

@@ -13,11 +13,11 @@ import java.util.List;
  */
 public interface ClassRosterDao {
     
-    Student addStudent(String studentID, Student student) throws ClassRosterDaoException;
+    Student addStudent(String studentID, Student student) throws ClassRosterPersistenceException;
     
-    List<Student> getAllStudents() throws ClassRosterDaoException;
+    List<Student> getAllStudents() throws ClassRosterPersistenceException;
     
-    Student getStudent(String studentID) throws ClassRosterDaoException;
+    Student getStudent(String studentID) throws ClassRosterPersistenceException;
     
-    Student removeStudent(String studentID) throws ClassRosterDaoException;
+    Student removeStudent(String studentID) throws ClassRosterPersistenceException;
 }
